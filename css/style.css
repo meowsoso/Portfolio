@@ -171,7 +171,7 @@ a:focus {
 
 .content {
   grid-area: grid;
-  margin: 25vh 0 30vh;
+  margin: 45vh 0 30vh;
 }
 
 .content--offset {
@@ -443,5 +443,13 @@ p.contactInfo img {
   .content--alternate .content__item-title,
   .content--alternate .content__item:nth-child(even) .content__item-title {
     grid-area: 1 / 1 / 4 / 2;
+  }
+
+  #introduction {
+    font-size: 1em;
+    top: 40vh;
+    font-weight: 500;
+    max-width: 60vw;
+    line-height: 1.3em;
   }
 }
