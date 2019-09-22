@@ -1,7 +1,7 @@
 $(document).ready(function() {
   $("div.projectBackground").hide();
   $("video#myVideo").hide();
-  var video = document.getElementById("myVideo");
+  const video = document.getElementById("myVideo");
 
   $("div#p3").hover(
     function() {
