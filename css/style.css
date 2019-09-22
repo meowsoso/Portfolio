@@ -31,7 +31,7 @@ body {
 .container {
   --color-text: #1d0029;
   --color-bg: #f9edae;
-  --color-link: #c55b61;
+  --color-link: #922d31;
   --color-link-hover: #1d1414;
   --color-title: #38681c;
   font-family: "Poppins", sans-serif;
@@ -45,6 +45,8 @@ div.projectBackground {
   position: fixed;
   z-index: -1;
   background: none;
+  background-repeat: no-repeat;
+  background-size: contain;
   height: 100vh;
   width: 100vw;
   left: 0;
@@ -113,8 +115,33 @@ a:focus {
 .page__title {
   grid-area: header;
   margin: 0 0 1rem;
-  font-size: 2em;
-  font-weight: 600;
+  font-size: 2.5em;
+  font-weight: 500;
+  -webkit-text-stroke: 0.5px black;
+  color: rgb(230, 228, 116);
+  text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
+    -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+#introduction {
+  position: absolute;
+  right: 10vw;
+  top: 30vh;
+  font-size: 1.2em;
+  font-weight: 500;
+  max-width: 40vw;
+  max-height: 20vh;
+  margin-top: 4em;
+  line-height: 1.5em;
+  text-align: right;
+}
+
+#myVideo {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  max-width: 100vw;
+  min-height: 100vh;
 }
 
 .credits {
@@ -129,6 +156,7 @@ a:focus {
   right: 3em;
   width: 15vw;
   text-align: right;
+  font-weight: 600;
 }
 
 .credits--fixed::before {
@@ -181,7 +209,7 @@ a:focus {
 }
 
 .content--center .content__item {
-  margin: 0 auto 60vh;
+  margin: 0 auto 30vh;
 }
 
 .content__item--expand {
@@ -321,11 +349,19 @@ a:focus {
 
 .content__item-description {
   grid-area: 3 / 1 / 3 / 3;
-  width: 70%;
+  width: 95%;
   position: relative;
   margin: 0;
   padding: 1rem 0 0 0;
   color: var(--color-description);
+  border-radius: 0.5em;
+}
+p.contactInfo a {
+  display: inline-block;
+  margin-right: 0.5em;
+}
+p.contactInfo img {
+  max-width: 4vw;
 }
 
 .content--alternate .content__item-title,

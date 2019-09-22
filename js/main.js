@@ -1,20 +1,54 @@
 $(document).ready(function() {
   $("div.projectBackground").hide();
+  $("video#myVideo").hide();
+  var video = document.getElementById("myVideo");
+
+  $("div#p3").hover(
+    function() {
+      video.play();
+      $("video#myVideo").fadeIn(2000);
+    },
+    function() {
+      video.pause();
+      $("video#myVideo").fadeOut(2000);
+    }
+  );
 
   $("div.content__item-imgwrap.projectPage").hover(
     function() {
+      let url;
+      if ($(this).attr("id") === "p0") {
+        url = 'url("./img/passage.jpg")';
+      } else if ($(this).attr("id") === "p1") {
+        url = 'url("./img/the_great_wave_bg.jpg")';
+      } else if ($(this).attr("id") === "p2") {
+        url = 'url("./img/ripple_bgjpg.jpg")';
+      } else if ($(this).attr("id") === "p3") {
+        url = "none";
+      }
+      $("div.content__item-decobar").css("opacity", "0");
+      $("p.content__item-description").css(
+        "background-color",
+        "rgba(255,255,255, 0.8)"
+      );
       $(this)
         .find("div")
-        .animate({ opacity: "0.5" });
+        .animate({ opacity: "0" });
       $(this)
         .find("a")
         .animate({ opacity: "1" });
       $(this).css("z-index", "2");
       $("div.projectBackground")
-        .css("background", 'url("../img/thebridge.jpg")')
-        .fadeIn(3000);
+        .css("background", url)
+        .css("background-size", "cover")
+        .fadeIn(2000);
     },
     function() {
+      $("div.content__item-decobar").css("opacity", "1");
+      $("p.content__item-description").css(
+        "background-color",
+        "rgba(255,255,255, 0)"
+      );
       $(this)
         .find("div")
         .animate({ opacity: "0.8" });
@@ -22,9 +56,7 @@ $(document).ready(function() {
         .find("a")
         .animate({ opacity: "0" });
       $(this).css("z-index", "0");
-      $("div.projectBackground")
-        .css("background", "none")
-        .fadeOut(3000);
+      $("div.projectBackground").fadeOut(2000);
     }
   );
 });
@@ -352,7 +384,7 @@ class SmoothScroll {
   }
   setSize() {
     // set the heigh of the body in order to keep the scrollbar on the page
-    body.style.height = `${this.DOM.scrollable.scrollHeight - 500}px`;
+    body.style.height = `${this.DOM.scrollable.scrollHeight - 300}px`;
   }
   style() {
     // the <main> needs to "stick" to the screen and not scroll
@@ -425,7 +457,6 @@ class SmoothScroll {
   }
 }
 
-/***********************************/
 /********** Preload stuff **********/
 
 // Preload images

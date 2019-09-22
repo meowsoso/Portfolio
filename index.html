@@ -6,7 +6,7 @@
     <title>Meo So</title>
     <link rel="shortcut icon" href="favicon.ico" />
     <link rel="stylesheet" href="https://use.typekit.net/dec4mzz.css" />
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
     <script>
       document.documentElement.className = "js";
       var supportsCssVars = function() {
@@ -33,20 +33,30 @@
   <body class="container loading">
     <div class="projectBackground"></div>
     <main>
+      <video muted loop id="myVideo">
+        <source src="./img/van_gogh_vid.mp4" type="video/mp4" />
+      </video>
       <div data-scroll class="page page--layout-2">
         <h1 class="page__title">Meo So - Junior Software Developer</h1>
+        <p id="introduction">
+          Former chef, creative problem solver. Passionate about coding. Scroll
+          down to find out more
+        </p>
+
         <div class="content content--center">
           <div class="content__item" id="aboutMe">
             <div class="content__item-imgwrap">
               <div
                 class="content__item-img"
-                style="background-image: url(img/panda_back.jpg);"
+                style="background-image: url(./img/panda_back.jpg);"
               ></div>
             </div>
             <h2 class="content__item-title">Hello World</h2>
             <p class="content__item-description">
-              I am a Junior Software Developer who has just finished an amazing
-              bootcamp in General Assembly. Scroll down to find out more.
+              I have just finished an amazing bootcamp at General Assembly. I
+              enjoy the creativity and possibilities that coding brings.
+              Currently looking for oppotunities to kickstart my career in
+              front-end develpment.
             </p>
             <div class="content__item-decobar"></div>
           </div>
@@ -54,19 +64,19 @@
             <div class="content__item-imgwrap">
               <div
                 class="content__item-img"
-                style="background-image: url(img/skills.jpg);"
+                style="background-image: url(./img/skills.jpg);"
               ></div>
             </div>
             <h2 class="content__item-title">Skills</h2>
             <p class="content__item-description">
               Full-stack ready. In 3 months, I learned front-end skills like
-              HTML/CSS, Javascript, Jquery, React. Also back-end skills like
+              HTML/CSS, JavaCcript, Jquery, React. Also back-end skills like
               Ruby on Rails, Node.js.
             </p>
             <div class="content__item-decobar"></div>
           </div>
           <div class="content__item" id="projects">
-            <div class="content__item-imgwrap projectPage">
+            <div class="content__item-imgwrap projectPage" id="p0">
               <div
                 class="content__item-img"
                 style="background-image: url(img/robot_run.png);"
@@ -87,15 +97,15 @@
             <h2 class="content__item-title">Project#0</h2>
             <p class="content__item-description">
               First project in GA. Robot escape page with interactive puzzles.
-              Made with Javascript and jQuery.
+              Made with JavaCcript and jQuery.
             </p>
             <div class="content__item-decobar"></div>
           </div>
           <div class="content__item">
-            <div class="content__item-imgwrap projectPage">
+            <div class="content__item-imgwrap projectPage" id="p1">
               <div
                 class="content__item-img"
-                style="background-image: url(img/the_great_wave.jpg);"
+                style="background-image: url(./img/the_great_wave.jpg);"
               ></div>
               <a
                 href="https://github.com/meowsoso/Bonsai"
@@ -112,16 +122,16 @@
             </div>
             <h2 class="content__item-title">Bonsai</h2>
             <p class="content__item-description">
-              Team communication tool. Express feelings in form of bonsai. Made
-              with Ruby on Rails, Javascript and Anime.js.
+              Team communication tool. Express feelings in form of a bonsai.
+              Made with Ruby on Rails, JavaScript and Anime.js.
             </p>
             <div class="content__item-decobar"></div>
           </div>
           <div class="content__item">
-            <div class="content__item-imgwrap projectPage">
+            <div class="content__item-imgwrap projectPage" id="p2">
               <div
                 class="content__item-img"
-                style="background-image: url(img/dripple.png);"
+                style="background-image: url(./img/ripplebg.jpg);"
               ></div>
               <a
                 href="https://github.com/meowsoso/Dripple_server"
@@ -138,16 +148,16 @@
             </div>
             <h2 class="content__item-title">Dripple</h2>
             <p class="content__item-description">
-              Share ideas with like-minds in close location and chat. Made with
-              Ruby on Rails and React.js.
+              Share ideas with like-minded people in close locations and chat
+              with them. Made with Ruby on Rails and React.js.
             </p>
             <div class="content__item-decobar"></div>
           </div>
           <div class="content__item">
-            <div class="content__item-imgwrap projectPage">
+            <div class="content__item-imgwrap projectPage" id="p3">
               <div
                 class="content__item-img"
-                style="background-image: url(img/sound_canvas.png);"
+                style="background-image: url(./img/sound_canvas.png);"
               ></div>
               <a
                 href="https://github.com/meowsoso/Sound-Canvas"
@@ -164,8 +174,8 @@
             </div>
             <h2 class="content__item-title">Sound Canvas</h2>
             <p class="content__item-description">
-              Art, music and audio visualisation. Made with Javascript P5.js and
-              P5.sound.
+              Art, music and audio visualisation. Made with JavaScript, P5.js
+              and P5.sound.
             </p>
             <div class="content__item-decobar"></div>
           </div>
@@ -173,12 +183,21 @@
             <div class="content__item-imgwrap">
               <div
                 class="content__item-img"
-                style="background-image: url(img/panda_video_game.gif);"
+                style="background-image: url(./img/panda_video_game.gif);"
               ></div>
             </div>
             <h2 class="content__item-title">Contact Me</h2>
-            <p class="content__item-description">
-              Linkin: xxxxxx Github: xxxx Email: xxxx
+            <p class="content__item-description contactInfo">
+              <a target="_blank" href="https://www.linkedin.com/in/meo-so"
+                >Linkin<img src="./img/linkin.png"
+              /></a>
+
+              <a target="_blank" href="https://www.github.com/meowsoso/"
+                >Github<img src="./img/github.png"
+              /></a>
+              <a href="mailto:meowsoso@gmail.com"
+                >Email<img src="./img/email.png"
+              /></a>
             </p>
             <div class="content__item-decobar"></div>
           </div>
