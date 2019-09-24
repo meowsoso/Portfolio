@@ -1,8 +1,9 @@
 $(document).ready(function() {
   $("div.projectBackground").hide();
   $("video#myVideo").hide();
+  // find video
   const video = document.getElementById("myVideo");
-
+  // play video when hover canvas
   $("div#p3").hover(
     function() {
       video.play();
@@ -13,7 +14,7 @@ $(document).ready(function() {
       $("video#myVideo").fadeOut(2000);
     }
   );
-
+  // control hover effects
   $("div.content__item-imgwrap.projectPage").hover(
     function() {
       let url;
@@ -51,7 +52,7 @@ $(document).ready(function() {
       );
       $(this)
         .find("div")
-        .animate({ opacity: "0.8" });
+        .animate({ opacity: "1" });
       $(this)
         .find("a")
         .animate({ opacity: "0" });
